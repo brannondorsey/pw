@@ -1,4 +1,4 @@
-# Bash password generator
+# Bash Password Generator
 
 Generate strong passwords using `/dev/urandom`. Creates a 17 character password using `a-zA-Z0-9._!@#$%^&*()` characters by default.
 
@@ -54,14 +54,16 @@ gdo
 ooo
 ```
 
-## What it do
+## What it do?
 
 Here is the script:
 
-```bash
+```
 $ cat pw
 #!/bin/sh
+# inspired by https://www.unix-ninja.com/p/A_cheat-sheet_for_password_crackers
 
 # usage: pw [length [characters]]
 tr -dc "${2:-'a-zA-Z0-9._!@#$%^&*()'}" < /dev/urandom | fold -w "${1:-17}" | head -n "${3:-1}"
+
 ```
