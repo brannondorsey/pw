@@ -15,7 +15,7 @@ git clone https://github.com/brannondorsey/pw
 cd pw
 
 # install in PATH...
-sudo cp pw /usr/local/bin/pw
+sudo cp pw /usr/bin/pw
 
 # or call from directory with
 ./pw
