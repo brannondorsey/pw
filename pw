@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# usage: pw [length [characters]]
+tr -dc "${2:-'a-zA-Z0-9._!@#$%^&*()'}" < /dev/urandom | fold -w "${1:-17}" | head -n "${3:-1}"
