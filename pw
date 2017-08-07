@@ -1,5 +1,5 @@
 #!/bin/sh
 # inspired by https://www.unix-ninja.com/p/A_cheat-sheet_for_password_crackers
 
-# usage: pw [length [characters]]
+# usage: pw [length [characters [num_passwords]]]
 tr -dc "${2:-'a-zA-Z0-9._!@#$%^&*()'}" < /dev/urandom | fold -w "${1:-17}" | head -n "${3:-1}"
